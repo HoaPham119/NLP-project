@@ -21,45 +21,34 @@ def remove_html(text):
 
 # Hàm loại bỏ ký tự đặc biệt
 
-
 def remove_special_characters(text):
     # Loại bỏ tất cả các ký tự không phải là chữ cái hoặc số
     return re.sub(r'[^a-zA-Z0-9\sàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđĐÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ.!?]', ' ', text)
 
 # Hàm chuyển đổi chữ hoa thành chữ thường
-
-
 def to_lowercase(text):
     return text.lower()
 
 # Hàm loại bỏ khoảng trắng thừa
-
-
 def remove_extra_whitespace(text):
     text = re.sub(r'\s+', ' ', text).strip()
     text = text.replace(" .", ".")
     text = text.replace(" !", "!")
     text = text.replace(" ?", "?")
     text = text.replace(" ,", ",")
-
     return text
 
 # Chuẩn hoá dấu thanh:
-
-
 def text_normalize_f(text):
     text = text_normalize(text)
+    text = remove_extra_whitespace(text)
     return text
 
 # Bước 4: Tách từ
-
-
 def word_tokenize(text):
     return ViTokenizer.tokenize(text)
 
 # Tách câu:
-
-
 def sentence_tokenize(text):
     text = sent_tokenize(text)
     text_new_sent = []
@@ -83,8 +72,6 @@ def chuan_hoa_unicode(text):
     return text
 
 # Hàm loại bỏ từ dừng
-
-
 def remove_stop_words(text):
     words = text.split()
     filtered_words = [word for word in words if word not in stop_words]
@@ -112,29 +99,30 @@ def normalize_punctuation(text):
 
 # Hàm tổng hợp để tiền xử lý văn bản
 def preprocess_text(text,
-                    clean=True,
-                    standardized=True,
+                    clean_html=True,
+                    clean_special_char=True,
+                    clean_extra_whitespace=True,
+                    chuan_hoa_unicode_action=True,
+                    chuan_hoa_chu_thuong= True,
+                    chuan_hoa_dau_thanh=True,
                     split_word=True,
                     split_sent=True,
                     remove_sw=True
                     ):
-    if clean:
-        # Loại bỏ mã html
+    if clean_html:
         text = remove_html(text)
-        # Loại bỏ kí tự đặc biệt
+    if clean_special_char:
         text = remove_special_characters(text)
+    if clean_extra_whitespace:
         # Loại khoảng trắng thừa
         text = remove_extra_whitespace(text)
-
     # Chuẩn hoá dữ liệu
-    if standardized:
-        # Chuẩn hoá unicode dựng sẵng:
+    if chuan_hoa_unicode_action:
         text = chuan_hoa_unicode(text)
+    if chuan_hoa_chu_thuong:
         text = to_lowercase(text)
-        # Chuẩn hoá dấu thanh
+    if chuan_hoa_dau_thanh:
         text = text_normalize_f(text)
-        # Loại khoảng trắng thừa
-        text = remove_extra_whitespace(text)
 
     if split_word:
         # Tách từ
@@ -151,7 +139,7 @@ def preprocess_text(text,
     if split_sent:
         text = sentence_tokenize(text)
         return text
-    elif clean:
+    elif clean_special_char:
         # Loại bỏ kí tự đặc biệt
         # text = remove_special_characters(text)
         text = re.sub(
