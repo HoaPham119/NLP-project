@@ -45,7 +45,7 @@ def text_normalize_f(text):
     return text
 
 # Bước 4: Tách từ
-def word_tokenize(text):
+def pyvi_word_tokenize(text):
     return ViTokenizer.tokenize(text)
 
 # Tách câu:
@@ -86,6 +86,8 @@ def normalize_punctuation(text):
     text = re.sub(r'([,.!?])([^\s])', r'\1 \2', text)
     # Loại bỏ khoảng trắng thừa
     text = re.sub(r'\s+', ' ', text).strip()
+    # Loại khoảng trắng thừa
+    text = remove_extra_whitespace(text)
     return text
 
 
@@ -105,7 +107,9 @@ def preprocess_text(text,
                     chuan_hoa_unicode_action=True,
                     chuan_hoa_chu_thuong= True,
                     chuan_hoa_dau_thanh=True,
-                    split_word=True,
+                    chuan_hoa_dau_cau= True,
+                    split_word_pyvi=False,
+                    split_word_vietokenizer=True,
                     split_sent=True,
                     remove_sw=True
                     ):
@@ -123,16 +127,18 @@ def preprocess_text(text,
         text = to_lowercase(text)
     if chuan_hoa_dau_thanh:
         text = text_normalize_f(text)
-
-    if split_word:
+    if chuan_hoa_dau_cau:
+        text = normalize_punctuation(text)
+    if split_word_pyvi:
         # Tách từ
         # Tách từ
-        text = word_tokenize(text)
+        text = pyvi_word_tokenize(text)
         # Chuẩn hoá dấu câu
         text = normalize_punctuation(text)
         # Loại khoảng trắng thừa
         text = remove_extra_whitespace(text)
-    
+    elif split_word_vietokenizer:
+        text = word_tokenize(text)
     if remove_sw:
         text = remove_stop_words(text=text)
     # Tách câu
