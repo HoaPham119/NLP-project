@@ -18,7 +18,7 @@ async def api_preprocess_text(text: str,
                             chuan_hoa_chu_thuong: bool = True,
                             chuan_hoa_dau_thanh: bool = True,
                             chuan_hoa_dau_cau:bool = True,
-                              split_word: bool = True,
+                              split_word_pyvi: bool = True,
                               split_sent: bool = True,
                               remove_sw: bool=True
                               ):
@@ -30,7 +30,7 @@ async def api_preprocess_text(text: str,
                            chuan_hoa_chu_thuong=chuan_hoa_chu_thuong,
                            chuan_hoa_dau_thanh=chuan_hoa_dau_thanh,
                            chuan_hoa_dau_cau=chuan_hoa_dau_cau,
-                           split_word=split_word,
+                           split_word_pyvi=split_word_pyvi,
                            split_sent=split_sent,
                            remove_sw =remove_sw
                            )

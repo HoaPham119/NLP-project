@@ -15,7 +15,7 @@ def call_api(text,
             chuan_hoa_chu_thuong= True,
             chuan_hoa_dau_thanh=True,
             chuan_hoa_dau_cau=True,
-             split_word=True,
+             split_word_pyvi=True,
              split_sent=True,
              remove_sw=True
              ):
@@ -28,7 +28,7 @@ def call_api(text,
         "chuan_hoa_chu_thuong": chuan_hoa_chu_thuong,
         "chuan_hoa_dau_thanh": chuan_hoa_dau_thanh,
         "chuan_hoa_dau_cau": chuan_hoa_dau_cau,
-        "split_word": split_word,
+        "split_word_pyvi": split_word_pyvi,
         "split_sent": split_sent,
         "remove_sw": remove_sw,
 
@@ -59,7 +59,7 @@ def gui():
         chuan_hoa_dau_cau = st.checkbox("Chuẩn hoá dấu câu")
     with col3:
         st.markdown("<p style='color: blue;'>Các tác vụ tách dữ liệu</p>", unsafe_allow_html=True)
-        split_word = st.checkbox("Tách từ")
+        split_word_pyvi = st.checkbox("Tách từ")
         split_sent = st.checkbox("Tách câu")
     # Nút Start
     if st.button('Xử lý'):
@@ -71,7 +71,7 @@ def gui():
                         chuan_hoa_chu_thuong=chuan_hoa_chu_thuong,
                         chuan_hoa_dau_thanh=chuan_hoa_dau_thanh,
                         chuan_hoa_dau_cau= chuan_hoa_dau_cau,
-                        split_word=split_word,
+                        split_word_pyvi=split_word_pyvi,
                         split_sent=split_sent,
                         remove_sw=remove_sw)
         # st.write("Văn bản sau khi được xử lý: ")
