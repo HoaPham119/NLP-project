@@ -1,21 +1,16 @@
-from transformers import BertTokenizer
-from gensim.utils import simple_preprocess
+import py_vncorenlp
+import os
+path = os.path.dirname(__file__)+"/../../models/VnCoreNLP"
+# Automatically download VnCoreNLP components from the original repository
+# and save them in some local working folder
+py_vncorenlp.download_model(save_dir=path)
 
-def word_BertTokenizer(text):
-    tokenizer = BertTokenizer.from_pretrained("bert-base-multilingual-cased")
-    text = tokenizer.tokenize(text)
-    return text
+# Load VnCoreNLP from the local working folder that contains both `VnCoreNLP-1.2.jar` and `models` 
+model = py_vncorenlp.VnCoreNLP(save_dir=path)
+# Equivalent to: model = py_vncorenlp.VnCoreNLP(annotators=["wseg", "pos", "ner", "parse"], save_dir='/absolute/path/to/vncorenlp')
 
+# Annotate a raw corpus
+model.annotate_file(input_file="/absolute/path/to/input/file", output_file="/absolute/path/to/output/file")
 
-def simple(text):
-    text = simple_preprocess(text)
-    return text
-
-text = "Đây là một ví dụ để tách từ."
-words = simple(text)
-print(words)
-
-
-# text = "Đây là một ví dụ để tách từ."
-# tokens = word_BertTokenizer(text)
-# print(tokens)
+# Annotate a raw text
+model.print_out(model.annotate_text("Ông Nguyễn Khắc Chúc  đang làm việc tại Đại học Quốc gia Hà Nội. Bà Lan, vợ ông Chúc, cũng làm việc tại đây."))

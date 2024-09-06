@@ -5,6 +5,7 @@ from src.api.api import API
 
 def main():
     API()
+
     print("Hello")
 
 
