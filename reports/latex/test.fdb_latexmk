@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1725465857.4814 "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.tex" "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.pdf" "test" 1725465857.84885 0
-  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux" 1725465857.8012 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.tex" 1725465857.01344 292 e5247743b32cf1689ef1278df584a770 ""
+["pdflatex"] 1725612773.05914 "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.tex" "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.pdf" "test" 1725612773.45299 0
+  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux" 1725612773.43224 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.tex" 1725612772.76412 292 e5247743b32cf1689ef1278df584a770 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1136768653 768 1321e9409b4137d6fb428ac9dc956269 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -15,7 +15,7 @@
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1715229427 8221440 36997169c19743c99831074b1516deaa ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   (generated)
-  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux"
-  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.log"
-  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.pdf"
+  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux"
+  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.log"
+  "/Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.pdf"
   (rewritten before read)

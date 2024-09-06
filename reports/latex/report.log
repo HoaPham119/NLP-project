@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  4 SEP 2024 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.9)  6 SEP 2024 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.tex"
-(/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.tex
+**"/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.tex"
+(/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -433,7 +433,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box54
-) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.aux (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/01.biangoai.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/code_tien_XLDL.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/api.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/gui.aux))
+) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.aux (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/01.biangoai.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/code_tien_XLDL.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/api.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/gui.aux))
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -457,7 +457,7 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 Package hyperref Info: Link coloring OFF on input line 12.
- (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.out) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.out)
+ (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.out) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
@@ -498,10 +498,10 @@ Package hyperref Info: Link coloring OFF on input line 12.
 
 \openout2 = `01.biangoai.aux'.
 
-(/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/01.biangoai.tex) [1
+(/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/01.biangoai.tex) [1
 
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.toc
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -519,35 +519,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `code_tien_XLDL.aux'.
 
- (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/code_tien_XLDL.tex
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 11.
+ (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/code_tien_XLDL.tex [3
+
+{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 22.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (694.90488pt too wide) in paragraph at lines 25--25
+Overfull \hbox (694.90488pt too wide) in paragraph at lines 36--36
 []    \T5/cmtt/m/n/12 return re.sub(r'[^a-zA-Z0-9\s ¡¤£¢¥¦§ª©¨«¬­°¯®±²µ´³¶·¸»º¹¼½à¿¾áâåäãæçèëêéìíîñğïòóöõô÷øùüûúış^^]^^[ÿ^^_^^^€„ƒ‚…†‡Š‰ˆ‹Œ‘’•”“–—˜›š™œÀŸÁÂÅÄÃÆÇÈËÊÉÌÍÎÑĞÏÒÓÖÕÔ×ØÙÜÛÚİŞ^^\^^Zß.!?]', ' ', text)[] 
  []
 
-[3
-
-] [4]
-Overfull \hbox (651.69043pt too wide) in paragraph at lines 103--103
+[4] [5]
+Overfull \hbox (651.69043pt too wide) in paragraph at lines 114--114
 []            \T5/cmtt/m/n/12 r'[^a-zA-Z0-9\s ¡¤£¢¥¦§ª©¨«¬­°¯®±²µ´³¶·¸»º¹¼½à¿¾áâåäãæçèëêéìíîñğïòóöõô÷øùüûúış^^]^^[ÿ^^_^^^€„ƒ‚…†‡Š‰ˆ‹Œ‘’•”“–—˜›š™œÀŸÁÂÅÄÃÆÇÈËÊÉÌÍÎÑĞÏÒÓÖÕÔ×ØÙÜÛÚİŞ^^\^^Zß_]', ' ', _text)[] 
  []
 
-[5] [6]
-Overfull \hbox (645.51694pt too wide) in paragraph at lines 165--165
+[6] [7]
+Overfull \hbox (645.51694pt too wide) in paragraph at lines 176--176
 []            \T5/cmtt/m/n/12 r'[^a-zA-Z0-9\s ¡¤£¢¥¦§ª©¨«¬­°¯®±²µ´³¶·¸»º¹¼½à¿¾áâåäãæçèëêéìíîñğïòóöõô÷øùüûúış^^]^^[ÿ^^_^^^€„ƒ‚…†‡Š‰ˆ‹Œ‘’•”“–—˜›š™œÀŸÁÂÅÄÃÆÇÈËÊÉÌÍÎÑĞÏÒÓÖÕÔ×ØÙÜÛÚİŞ^^\^^Zß_]', ' ', text)[] 
  []
 
-) [7]
+) [8]
 \openout2 = `api.aux'.
 
- (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/api.tex [8
+ (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/api.tex [9
 
 
 
-{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+]
 Overfull \hbox (9.64722pt too wide) in paragraph at lines 51--51
 []                           \T5/cmtt/m/n/12 clean_extra_whitespace=clean_extra_whitespace,[] 
  []
@@ -557,14 +557,14 @@ Overfull \hbox (34.34119pt too wide) in paragraph at lines 52--52
 []                           \T5/cmtt/m/n/12 chuan_hoa_unicode_action=chuan_hoa_unicode_action,[] 
  []
 
-[9]) [10]
+[10]) [11]
 \openout2 = `gui.aux'.
 
- (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/gui.tex [11
+ (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/gui.tex [12
 
 
 
-] [12]
+] [13]
 Overfull \hbox (188.6785pt too wide) in paragraph at lines 85--85
 []        \T5/cmtt/m/n/12 st.markdown("<p style='color: blue;'>C¡c t¡c vö l m s¤ch dú li»u</p>", unsafe_allow_html=True)[] 
  []
@@ -574,7 +574,7 @@ Overfull \hbox (9.64722pt too wide) in paragraph at lines 88--88
 []        \T5/cmtt/m/n/12 clean_extra_whitespace = st.checkbox("Xo¡ c¡c kho£ng tr­ng thøa")[] 
  []
 
-[13]
+[14]
 Overfull \hbox (194.85199pt too wide) in paragraph at lines 91--91
 []        \T5/cmtt/m/n/12 st.markdown("<p style='color: blue;'>C¡c t¡c vö chu©n ho¡ dú li»u</p>", unsafe_allow_html=True)[] 
  []
@@ -589,7 +589,7 @@ Overfull \hbox (15.82071pt too wide) in paragraph at lines 105--105
 []                        \T5/cmtt/m/n/12 chuan_hoa_unicode_action=chuan_hoa_unicode_action,[] 
  []
 
-) [14] (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.aux (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/01.biangoai.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/code_tien_XLDL.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/api.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/gui.aux))
+) [15] (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.aux (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/01.biangoai.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/code_tien_XLDL.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/api.aux) (/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/gui.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -598,18 +598,18 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: A2028247AE0B3191CB1AFF5AEAA591FA;4434.
  ) 
 Here is how much of TeX's memory you used:
- 10697 strings out of 474116
- 164994 string characters out of 5743683
+ 10698 strings out of 474116
+ 165235 string characters out of 5743683
  1939187 words of memory out of 5000000
  32861 multiletter control sequences out of 15000+600000
  576058 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,651b,585s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,657b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on "/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/report.pdf" (14 pages, 114108 bytes).
+Output written on "/Users/hoapham/Documents/CÃ¡ NhÃ¢n/Cao Há»c/NLP-project/reports/latex/report.pdf" (15 pages, 116269 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 175 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 210 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

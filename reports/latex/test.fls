@@ -1,9 +1,9 @@
-PWD /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports
+PWD /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.tex
-OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.log
+INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.tex
+OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
@@ -13,14 +13,14 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux
-INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux
-INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux
-OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux
+INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux
+INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux
+INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux
+OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.pdf
+OUTPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.pdf
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/test.aux
+INPUT /Users/hoapham/Documents/Cá Nhân/Cao Học/NLP-project/reports/latex/test.aux
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb

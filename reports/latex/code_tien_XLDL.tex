@@ -3,6 +3,17 @@
 Với đề tài này, các bạn hãy tìm hiểu và cài đặt các API xử lý văn bản tiếng Việt (tiền xử lý, chuẩn hóa encoding, dấu câu, dấu thanh, loại bỏ các ký tự đặc biệt/dư thừa/mã HTML..., tách câu). API có thể thực hiện riêng rẽ hoặc đồng thời nhiều thao tác cùng lúc.
 
 \section{Nội dung thực hiện}
+{\bf Loại bỏ nhiễu và dữ liệu không cần thiết:} Văn bản thô thường chứa nhiều ký tự không cần thiết như dấu câu, ký tự đặc biệt, số, hoặc khoảng trắng thừa, mã html. Loại bỏ các thành phần này giúp giảm nhiễu trong dữ liệu và tập trung vào các thông tin có ý nghĩa.\\
+{\bf Chuẩn hóa văn bản:} 
+\begin{itemize}
+    \item Giảm thiểu sự phân biệt chữ hoa và chữ thường: chuyển hết về chữ thường
+    \item Chuẩn hóa encoding: Thay thế cách gõ Unicode tổ hợp bằng cách gõ của Unicode dựng sẵn.
+    \item Chuẩn hoá dấu câu, dấu thanh
+\end{itemize}
+{\bf Tách từ:} Tiếng Việt là ngôn ngữ đa âm tiết, việc tách từ giúp nhận diện rõ ràng các từ trong câu. Điều này rất quan trọng vì nhiều mô hình NLP yêu cầu dữ liệu đầu vào là các từ hoặc cụm từ. \\
+{\bf Tách câu:} Tách câu là một bước tiền xử lý quan trọng trong việc chuẩn bị dữ liệu cho nhiều tác vụ NLP khác nhau. Dữ liệu được tách câu sẽ dễ dàng hơn để gán nhãn, huấn luyện mô hình, và đánh giá kết quả\\
+{\bf Loại bỏ từ dừng (StopWords):} Loại bỏ các từ dừng không mang nhiều ý nghĩa như "là", "và", "nhưng", "với",...
+
 \subsection{Code các hàm Tiền xử lý dữ liệu}
 File name: \textbf{ pre\_processing.py} là file code bao gồm toàn bộ các hàm dùng để tiền xử lý dữ liệu ngôn ngữ tiếng Việt.
 
