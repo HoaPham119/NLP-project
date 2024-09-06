@@ -9,15 +9,6 @@ from src.api.pre_processing import *
 
 app = FastAPI()
 
-# @app.get("/")
-# async def root():
-#     return {"message": "Hello World"}
-
-# @app.get("/items/{item_id}")
-# async def read_item(item_id):
-#     return {"item_id": item_id}
-
-
 @app.get("/api/v1/pre-processing")
 async def api_preprocess_text(text: str,
                             clean_html: bool = True,
@@ -44,11 +35,6 @@ async def api_preprocess_text(text: str,
                            remove_sw =remove_sw
                            )
     return {"data": text}
-
-# @app.get("/normalize/{text}")
-# async def api_normalize_text(text):
-#     text = normalize_text(text=text)
-#     return {"data": text}
 
 
 def API():

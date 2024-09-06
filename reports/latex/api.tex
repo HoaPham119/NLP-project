@@ -1,0 +1,65 @@
+\subsection{API}
+
+Đoạn mã dưới đây định nghĩa một API sử dụng FastAPI để tiền xử lý văn bản với nhiều lựa chọn khác nhau. API này có một endpoint \texttt{/api/v1/pre-processing} dùng để tiền xử lý văn bản với nhiều tùy chọn như làm sạch HTML, chuẩn hóa ký tự đặc biệt, loại bỏ khoảng trắng thừa, chuẩn hóa Unicode, chữ thường, dấu thanh, dấu câu, tách từ, tách câu, và loại bỏ từ dừng.
+
+\subsubsection{Các tham số API:}
+\begin{itemize}
+    \item \texttt{text}: Chuỗi văn bản đầu vào.
+    \item Các tham số boolean cho phép người dùng lựa chọn có thực hiện các bước tiền xử lý như:
+    \begin{itemize}
+        \item Loại bỏ HTML (\texttt{clean\_html})
+        \item Loại bỏ ký tự đặc biệt (\texttt{clean\_special\_char})
+        \item Loại bỏ khoảng trắng thừa (\texttt{clean\_extra\_whitespace})
+        \item Chuẩn hóa Unicode (\texttt{chuan\_hoa\_unicode\_action})
+        \item Chuyển chữ thường (\texttt{chuan\_hoa\_chu\_thuong})
+        \item Chuẩn hóa dấu thanh (\texttt{chuan\_hoa\_dau\_thanh})
+        \item Chuẩn hóa dấu câu (\texttt{chuan\_hoa\_dau\_cau})
+        \item Tách từ (\texttt{split\_word})
+        \item Tách câu (\texttt{split\_sent})
+        \item Loại bỏ từ dừng (\texttt{remove\_sw})
+    \end{itemize}
+\end{itemize}
+\subsubsection{Phần code cho hàm tạo API}
+Hàm \texttt{preprocess\_text} được gọi để thực hiện các tác vụ này và trả về kết quả là văn bản đã được tiền xử lý.
+\begin{verbatim}
+from fastapi import FastAPI
+import uvicorn
+import asyncio
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "../.."))
+from src.api.pre_processing import *
+
+app = FastAPI()
+
+@app.get("/api/v1/pre-processing")
+async def api_preprocess_text(text: str,
+                            clean_html: bool = True,
+                            clean_special_char: bool = True,
+                            clean_extra_whitespace: bool = True,
+                            chuan_hoa_unicode_action: bool = True,
+                            chuan_hoa_chu_thuong: bool = True,
+                            chuan_hoa_dau_thanh: bool = True,
+                            chuan_hoa_dau_cau:bool = True,
+                            split_word_pyvi: bool = True,
+                              split_sent: bool = True,
+                              remove_sw: bool=True
+                              ):
+    text = preprocess_text(text=text,
+                           clean_html=clean_html,
+                           clean_special_char=clean_special_char,
+                           clean_extra_whitespace=clean_extra_whitespace,
+                           chuan_hoa_unicode_action=chuan_hoa_unicode_action,
+                           chuan_hoa_chu_thuong=chuan_hoa_chu_thuong,
+                           chuan_hoa_dau_thanh=chuan_hoa_dau_thanh,
+                           chuan_hoa_dau_cau=chuan_hoa_dau_cau,
+                           split_word=split_word,
+                           split_sent=split_sent,
+                           remove_sw =remove_sw
+                           )
+    return {"data": text}
+
+
+def API():
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+\end{verbatim}

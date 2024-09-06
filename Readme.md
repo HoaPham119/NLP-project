@@ -8,7 +8,7 @@ Với đề tài này, các bạn hãy tìm hiểu và cài đặt các API xử
 
 ## Cài Đặt Môi Trường
 
-Để bắt đầu, bạn cần cài đặt môi trường ảo để quản lý các phụ thuộc. Dưới đây là hướng dẫn để cài đặt môi trường ảo:
+Để bắt đầu, bạn cần cài đặt môi trường ảo. Dưới đây là hướng dẫn để cài đặt môi trường ảo:
 
 1. **Cài đặt Python (Nếu chưa có):**
    - Tải Python từ trang chính thức [python.org](https://www.python.org/downloads/) và cài đặt.
