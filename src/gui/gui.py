@@ -1,12 +1,12 @@
 import requests
 import json
 import streamlit as st
+from docx import Document
 
 
 base_url = "http://0.0.0.0:8000/"
 path_url = "api/v1/pre-processing"
 headers = {"Content-Type": "application/json"}
-
 
 def call_api(text,
             clean_html=True,
@@ -41,11 +41,41 @@ def call_api(text,
     data = json.loads(rsp.text)["data"]
     return data
 
+# Hàm để đọc file text
+def read_txt(file):
+    return file.read().decode('utf-8')
+
+# Hàm để đọc file Word
+def read_docx(file):
+    doc = Document(file)
+    full_text = []
+    for paragraph in doc.paragraphs:
+        full_text.append(paragraph.text)
+    return '\n'.join(full_text)
 
 def gui():
     st.title("ĐỒ ÁN XỬ LÝ VĂN BẢN TIẾNG VIỆT")
+    text = ""
+    # Cho người dùng chọn phương thức nhập liệu
+    option = st.selectbox("Chọn phương thức nhập liệu:", ("Tải lên file", "Nhập văn bản trực tiếp"))
+    if option == "Tải lên file":
+        # Tải file lên (chỉ chấp nhận .txt và .docx)
+        uploaded_file = st.file_uploader("Chọn file văn bản txt hoặc Word", type=["txt", "docx"])
 
-    text = st.text_input("Nhập vào đoạn văn bản cần xử lý:")
+        if uploaded_file is not None:
+            # Xử lý file dựa trên loại file
+            if uploaded_file.name.endswith(".txt"):
+                text = read_txt(uploaded_file)
+                # st.subheader("Nội dung file .txt")
+            elif uploaded_file.name.endswith(".docx"):
+                text = read_docx(uploaded_file)
+    
+    elif option == "Nhập văn bản trực tiếp":
+        # Cho phép người dùng nhập văn bản trực tiếp
+        text = st.text_input("Nhập vào đoạn văn bản cần xử lý:")
+    # # Tạo giao diện tải file lên
+    # st.title("Tải lên và đọc nội dung file")
+    # text = st.text_input("Nhập vào đoạn văn bản cần xử lý:")
     st.write("Lựa chọn các tác vụ bạn mong muốn:")
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -90,9 +120,6 @@ def gui():
 
 
 if __name__ == "__main__":
-    # text = """
-    # Hôm nay, Hà Nội ghi nhận 25 ca nhiễm mới covid19! Thành phố đang tăng cường các biện pháp phòng dịch. Người dân cần tuân thủ các quy định về giãn cách xã hội. Thủ tướng chính phủ đã chỉ đạo các bộ, ngành cần hành động nhanh chóng để ngăn chặn dịch bệnh lây lan, ông nói Chúng ta không được chủ quan!!
-    # """
     text = f"Cộng hoàaa aa..."
     call_api(text)
     gui()
