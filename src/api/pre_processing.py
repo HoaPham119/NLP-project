@@ -66,9 +66,14 @@ def sentence_tokenize(text):
 
     return text_new_sent
 
-# Chuẩn hoá unicode
-def chuan_hoa_unicode(text):
+# Chuẩn hoá unicode dựng sẵng: ghép các ký tự tổ hợp lại thành ký tự dựng sẵn nếu có thể
+def chuan_hoa_unicode_NFC(text):
     text = unicodedata.normalize('NFC', text)
+    return text
+
+# Chuẩn hoá unicode tổ hợp:  tách ký tự dựng sẵn thành ký tự cơ bản và các dấu
+def chuan_hoa_unicode_NFD(text):
+    text = unicodedata.normalize('NFD', text)
     return text
 
 # Hàm loại bỏ từ dừng
@@ -96,12 +101,12 @@ def preprocess_text(text,
                     clean_html=True,
                     clean_special_char=True,
                     clean_extra_whitespace=True,
-                    chuan_hoa_unicode_action=True,
+                    chuan_hoa_unicode_NFC_action=True,
+                    chuan_hoa_unicode_NFD_action=True,
                     chuan_hoa_chu_thuong= True,
                     chuan_hoa_dau_thanh=True,
                     chuan_hoa_dau_cau= True,
                     split_word_pyvi=True,
-                    # split_word_vietokenizer=True,
                     split_sent=True,
                     remove_sw=True
                     ):
@@ -113,30 +118,23 @@ def preprocess_text(text,
         # Loại khoảng trắng thừa
         text = remove_extra_whitespace(text)
     # Chuẩn hoá dữ liệu
-    if chuan_hoa_unicode_action:
-        text = chuan_hoa_unicode(text)
+    if chuan_hoa_unicode_NFC_action:
+        text = chuan_hoa_unicode_NFC(text)
+    # Chuẩn hoá dữ liệu
+    if chuan_hoa_unicode_NFD_action:
+        text = chuan_hoa_unicode_NFD(text)
     if chuan_hoa_chu_thuong:
         text = to_lowercase(text)
     if chuan_hoa_dau_thanh:
         text = text_normalize_f(text)
     if chuan_hoa_dau_cau:
         text = normalize_punctuation(text)
-    if split_word_pyvi:
-        # Tách từ
-        # Tách từ
-        text = pyvi_word_tokenize(text)
-        # Chuẩn hoá dấu câu
-        text = normalize_punctuation(text)
-        # Loại khoảng trắng thừa
-        text = remove_extra_whitespace(text)
-    # elif split_word_vietokenizer:
-    #     text = word_tokenize(text)
+    
     if remove_sw:
         text = remove_stop_words(text=text)
     # Tách câu
     if split_sent:
         text = sentence_tokenize(text)
-        return text
     elif clean_special_char:
         # Loại bỏ kí tự đặc biệt
         # text = remove_special_characters(text)
@@ -144,8 +142,32 @@ def preprocess_text(text,
             r'[^a-zA-Z0-9\sàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđĐÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸ_]', ' ', text)
         # Loại khoảng trắng thừa
         text = remove_extra_whitespace(text)
-
-    return [text]
+        
+    if split_word_pyvi:
+        if split_sent:
+            final_text = []
+            for _text in text:
+                # Tách từ
+                _text = pyvi_word_tokenize(_text)
+                # Chuẩn hoá dấu câu
+                _text = normalize_punctuation(_text)
+                # Loại khoảng trắng thừa
+                _text = remove_extra_whitespace(_text)
+                final_text.append(_text)
+            return final_text
+        else:
+            text = pyvi_word_tokenize(text)
+            # Chuẩn hoá dấu câu
+            text = normalize_punctuation(text)
+            # Loại khoảng trắng thừa
+            text = remove_extra_whitespace(text)
+            final_text.append(text)
+            return [text]
+    else:
+        if split_sent:
+            return text
+        else:
+            return [text]
 
 if __name__ == "__main__":
     # text = """<p>Hôm nay, Hà Nội ghi nhận 25 ca nhiễm mới covid-19!   Thành phố đang tăng cường các biện pháp phòng dịch   . Người dân cần tuân thủ các quy định về giãn cách xã hội . Thủ tướng chính phủ đã chỉ đạo các bộ, ngành cần hành động nhanh chóng   để ngăn chặn dịch bệnh lây lan, ông nói: "Chúng ta không được chủ quan"!!</p>
@@ -183,6 +205,6 @@ if __name__ == "__main__":
 
     """
     # Tiền xử lý văn bản
-    processed_text = preprocess_text(text, split_sent=False)
+    processed_text = preprocess_text(text, split_sent=True)
     print("Văn bản sau khi tiền xử lý:", processed_text)
     print()

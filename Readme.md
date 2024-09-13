@@ -11,7 +11,7 @@ Với đề tài này, các bạn hãy tìm hiểu và cài đặt các API xử
 Để bắt đầu, bạn cần cài đặt môi trường ảo. Dưới đây là hướng dẫn để cài đặt môi trường ảo:
 
 1. **Cài đặt Python (Nếu chưa có):**
-   - Tải Python từ trang chính thức [python.org](https://www.python.org/downloads/) và cài đặt.
+   - Tải Python từ trang chính thức [python.org](https://www.python.org/downloads/), version 3.9.11 và cài đặt.
 
 2. **Tạo môi trường ảo:**
    ```bash

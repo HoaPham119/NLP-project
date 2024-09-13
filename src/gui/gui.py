@@ -2,6 +2,7 @@ import requests
 import json
 import streamlit as st
 
+
 base_url = "http://0.0.0.0:8000/"
 path_url = "api/v1/pre-processing"
 headers = {"Content-Type": "application/json"}
@@ -11,7 +12,8 @@ def call_api(text,
             clean_html=True,
             clean_special_char=True,
             clean_extra_whitespace=True,
-            chuan_hoa_unicode_action=True,
+            chuan_hoa_unicode_NFC_action=True,
+            chuan_hoa_unicode_NFD_action=True,
             chuan_hoa_chu_thuong= True,
             chuan_hoa_dau_thanh=True,
             chuan_hoa_dau_cau=True,
@@ -24,7 +26,8 @@ def call_api(text,
         "clean_html": clean_html,
         "clean_special_char": clean_special_char,
         "clean_extra_whitespace": clean_extra_whitespace,
-        "chuan_hoa_unicode_action": chuan_hoa_unicode_action,
+        "chuan_hoa_unicode_NFC_action": chuan_hoa_unicode_NFC_action,
+        "chuan_hoa_unicode_NFD_action": chuan_hoa_unicode_NFD_action,
         "chuan_hoa_chu_thuong": chuan_hoa_chu_thuong,
         "chuan_hoa_dau_thanh": chuan_hoa_dau_thanh,
         "chuan_hoa_dau_cau": chuan_hoa_dau_cau,
@@ -53,21 +56,24 @@ def gui():
         remove_sw = st.checkbox("Loại bỏ stopwords")
     with col2:
         st.markdown("<p style='color: blue;'>Các tác vụ chuẩn hoá dữ liệu</p>", unsafe_allow_html=True)
-        chuan_hoa_unicode_action = st.checkbox("Chuẩn hoá unicode")
+        chuan_hoa_unicode_NFC_action = st.checkbox("Chuẩn hoá unicode thành dựng sẵn")
+        chuan_hoa_unicode_NFD_action = st.checkbox("Chuẩn hoá unicode thành tổ hợp")
         chuan_hoa_chu_thuong = st.checkbox("Chuẩn hoá về chữ thường")
         chuan_hoa_dau_thanh = st.checkbox("Chuẩn hoá dấu thanh")
         chuan_hoa_dau_cau = st.checkbox("Chuẩn hoá dấu câu")
     with col3:
         st.markdown("<p style='color: blue;'>Các tác vụ tách dữ liệu</p>", unsafe_allow_html=True)
-        split_word_pyvi = st.checkbox("Tách từ")
         split_sent = st.checkbox("Tách câu")
+        split_word_pyvi = st.checkbox("Tách từ")
+        
     # Nút Start
     if st.button('Xử lý'):
         data = call_api(text=text,
                         clean_html=clean_html,
                         clean_special_char=clean_special_char,
                         clean_extra_whitespace=clean_extra_whitespace,
-                        chuan_hoa_unicode_action=chuan_hoa_unicode_action,
+                        chuan_hoa_unicode_NFC_action=chuan_hoa_unicode_NFC_action,
+                        chuan_hoa_unicode_NFD_action=chuan_hoa_unicode_NFD_action,
                         chuan_hoa_chu_thuong=chuan_hoa_chu_thuong,
                         chuan_hoa_dau_thanh=chuan_hoa_dau_thanh,
                         chuan_hoa_dau_cau= chuan_hoa_dau_cau,
