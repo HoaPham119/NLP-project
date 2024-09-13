@@ -161,7 +161,6 @@ def preprocess_text(text,
             text = normalize_punctuation(text)
             # Loại khoảng trắng thừa
             text = remove_extra_whitespace(text)
-            final_text.append(text)
             return [text]
     else:
         if split_sent:
